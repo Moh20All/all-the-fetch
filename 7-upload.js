@@ -19,7 +19,7 @@ export function setData() {
     let jsonstring = JSON.stringify(obj);
 
     let fd = new FormData(document.getElementById('myform'));
-    // console.log(imgInput.files[0]);
+    console.log(fd.append);
     // fd.append('imageFile', imgInput.files[0], imgInput.files[0].name);
 
     let request = new Request(endpoint, {

@@ -11,19 +11,23 @@ export function getData() {
 
   fetch(jsonstr)
     .then((response) => {
-      if (!response.ok) throw new Error('invalid');
+      if (!response.ok) throw new Error("invalid");      
       return response.json();
     })
     .then((dataArray) => {
-      //
+      console.log(dataArray)
       list.innerHTML = dataArray
-        .map(({ uid, first_name, last_name }) => {
-          return `<li class="listitem" data-uid="${uid}">
+        .map(
+          ({
+            uid,
+            first_name,
+            last_name,
+          }) => `<li class="listitem" data-uid="${uid}">
             <p>${first_name}</p>
             <p>${last_name}</p>
-          </li>`;
-        })
-        .join('');
+          </li>`
+        )
+        .join("");
     })
     .catch(console.warn);
 

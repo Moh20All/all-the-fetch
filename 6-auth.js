@@ -14,6 +14,7 @@ export function getData() {
   // document.cookie('')
 
   let h = new Headers();
+  console.log(url.searchParams);
   // h.append('content-type', 'application/json')
   // h.append('origin', 'https://cia.org')
   h.append('x-api-key', 'kajshdfkahjsdfkjhsdfkahsdfkjksdjhfksjdh'); //API key
